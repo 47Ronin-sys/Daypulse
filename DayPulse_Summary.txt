@@ -1,0 +1,39 @@
+DayPulse - Smart Android App Concept & Setup Guide
+===================================================
+
+Hi! Here is the summary of the DayPulse Android app project:
+
+WHAT IS DAYPULSE?
+-----------------
+DayPulse is a smart Android calendar application built with Flutter that integrates:
+1. Power Outage & Load Shedding Tracker:
+   - Real-time grid status (Online vs Blackout active)
+   - Countdown timer to the next scheduled power outage
+   - Automatic conflict warnings if a calendar event/meeting coincides with a blackout
+   - Outage preparation checklist (device charging, inverters, backup readiness)
+2. Hyperlocal Weather Forecast:
+   - Powered by Open-Meteo (100% free, no API key required)
+   - Real-time temperature, rain probability, wind speed, and hourly forecast
+   - Global city search with geocoding
+3. Commute & Traffic Monitor:
+   - Saved commute routes with typical vs current estimated duration
+   - One-tap launch into Google Maps GPS navigation
+4. Full Interactive Calendar:
+   - Month and day views with local offline storage (no account required to start)
+   - Daily morning briefing dashboard unifying all information
+
+HOW TO BUILD THE ANDROID APK:
+-----------------------------
+Option 1: Automated Cloud Build via GitHub (Easiest - No Android SDK needed locally)
+1. Push this project folder to GitHub.
+2. The included GitHub Actions workflow (.github/workflows/build-apk.yml) automatically runs and compiles the release APK.
+3. Download "DayPulse-Release-APK" from the GitHub Actions tab directly onto your Android phone!
+
+Option 2: Local Build
+Run in the project directory:
+$ flutter pub get
+$ flutter build apk --release
+The output APK is generated at: build/app/outputs/flutter-apk/app-release.apk
+
+Source Code Location:
+/home/ronin/.gemini/antigravity/scratch/daypulse
